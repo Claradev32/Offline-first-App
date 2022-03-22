@@ -2,8 +2,8 @@ let result = "";
 
 fetch("http://localhost:8000/blogs")
   .then((res) => res.json())
-  .then(({ blogs } = data) => {
-    blogs.forEach(({ title, avatar, intro } = blogs) => {
+  .then(({ rows } = data) => {
+    rows.forEach(({ title, avatar, intro } = rows) => {
       result += `
        <div class="card">
             <img class="card-avatar" src="/${avatar}"/>

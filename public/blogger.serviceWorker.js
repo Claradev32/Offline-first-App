@@ -14,6 +14,7 @@ self.addEventListener("install", (installEvt) => {
     caches
       .open(BLOGGER_ASSETS)
       .then((cache) => {
+        console.log(cache)
         cache.addAll(assets);
       })
       .then(self.skipWaiting())
